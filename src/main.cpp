@@ -209,7 +209,6 @@ int main()
 				{
 					test.scalex *= 0.5;
 					test.scaley *= 0.5;
-					cout << "Scale: (" << test.scalex << "|" << test.scaley << ")" << endl;
 					test.update();
 					break;
 
@@ -220,7 +219,6 @@ int main()
 					test.scalex *= 2.0;
 					test.scaley *= 2.0;
 					test.update();
-					cout << "Scale: (" << test.scalex << "|" << test.scaley << ")" << endl;
 					break;
 
 				}
@@ -228,7 +226,6 @@ int main()
 				{
 					test.iterations++;
 					test.update();
-					cout << "Iterations: " << test.iterations << endl;
 					break;
 
 				}
@@ -237,7 +234,6 @@ int main()
 					if (test.iterations >= 1)
 						test.iterations--;
 					test.update();
-					cout << "Iterations: " << test.iterations << endl;
 					break;
 
 				}
@@ -245,7 +241,6 @@ int main()
 				{
 					test.viewport.z += test.scaley / test.height;
 					test.update();
-					cout << "z: " << test.viewport.z << endl;
 					break;
 
 				}
@@ -253,7 +248,6 @@ int main()
 				{
 					test.viewport.z -= test.scaley / test.height;
 					test.update();
-					cout << "z: " << test.viewport.z << endl;
 					break;
 
 				}
