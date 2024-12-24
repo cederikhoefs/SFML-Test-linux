@@ -1,4 +1,4 @@
-#version 130
+#version 410
 
 uniform int screenx;
 uniform int screeny;
@@ -36,13 +36,10 @@ vec2 M(in vec2 pos, in vec2 pos0){
 }
 
 vec2 C(in vec2 pos){
-
-	vec4 powx;
-	vec4 powy;
-	for(int i = 0; i < 4; i++){
-		powx[i] = pow(float(pos.x), float(i));
-		powy[i] = pow(float(pos.y), float(i));
-	}
+	float a = float(pos.x);
+	float b = float(pos.y);
+	vec4 powx = vec4(1, a, a*a, a*a*a);
+	vec4 powy = vec4(1, b, b*b, b*b*b);
 
 	return vec2(dot(functionx*powx, powy), dot(functiony*powx,powy));
 }
